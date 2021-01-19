@@ -14,7 +14,148 @@
 </head>
 
 <body>
+    <svg width="100%" viewBox="0 0 1440 865" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M1440 0H0V100C0 158 63.5021 1150.5 780.027 783C1496.55 415.5 1440 100 1440 100C1444.39 7.25902 1440 0 1440 0Z"
+            fill="#42A5F5" />
+    </svg>
 
+    <header id="heading">
+        <button class="show menu invisible" onclick="display('.navbar')">
+            <svg class="burger" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6 27H30C30.825 27 31.5 26.325 31.5 25.5C31.5 24.675 30.825 24 30 24H6C5.175 24 4.5 24.675 4.5 25.5C4.5 26.325 5.175 27 6 27ZM6 19.5H30C30.825 19.5 31.5 18.825 31.5 18C31.5 17.175 30.825 16.5 30 16.5H6C5.175 16.5 4.5 17.175 4.5 18C4.5 18.825 5.175 19.5 6 19.5ZM4.5 10.5C4.5 11.325 5.175 12 6 12H30C30.825 12 31.5 11.325 31.5 10.5C31.5 9.675 30.825 9 30 9H6C5.175 9 4.5 9.675 4.5 10.5Z" />
+            </svg>
+        </button>
+
+        <h1>logo</h1>
+
+        <nav class="navbar">
+            <button class="menu invisible" onclick="hide('.navbar')">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M27.45 8.565C26.865 7.98 25.92 7.98 25.335 8.565L18 15.885L10.665 8.55C10.08 7.965 9.13499 7.965 8.54999 8.55C7.96499 9.135 7.96499 10.08 8.54999 10.665L15.885 18L8.54999 25.335C7.96499 25.92 7.96499 26.865 8.54999 27.45C9.13499 28.035 10.08 28.035 10.665 27.45L18 20.115L25.335 27.45C25.92 28.035 26.865 28.035 27.45 27.45C28.035 26.865 28.035 25.92 27.45 25.335L20.115 18L27.45 10.665C28.02 10.095 28.02 9.135 27.45 8.565Z"
+                        fill="white" />
+                </svg>
+            </button>
+
+
+            <ul>
+                <li><a onclick="hide('.navbar')" href="#home">Home</a></li>
+                <li><a onclick="hide('.navbar')" href="#pricing">Pricing</a></li>
+                <li><a onclick="hide('.navbar')" href="#about">About</a></li>
+                <li><a onclick="hide('.navbar')" href="#contact">Contact</a></li>
+                <li><a class="login" href="loginpage.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <img src="images/home.png" alt="">
+        <p class="slogan">Discover a whole new world of pure imagination</p>
+    </section>
+
+    <section id="pricing">
+        <div class="priceList">
+            <div class="option width80 free">
+                <div class="price">$ 000</div>
+                <h3>Free</h3>
+                <ul>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+
+            <div class="option width80 pro">
+                <div class="price">$ 350</div>
+                <h3>Pro</h3>
+                <ul>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                </ul>
+                <button class="dark">Get Started</button>
+            </div>
+
+            <div class="option width80 deluxe">
+                <div class="price">$ 600</div>
+                <h3>Deluxe</h3>
+                <ul>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                    <li>Lipsum</li>
+                </ul>
+                <button>Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="width80">
+        <img src="images/about.png" alt="">
+
+        <div>
+            <h2>About Us</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vivamus rhoncus eget sapien vel placerat. Nulla vel nisi lorem.
+                Curabitur commodo, nibh dictum tempor interdum, leo erat auctor tortor,
+                non cursus sem urna ut risus. Nullam metus purus, venenatis a dui dapibus,
+                iaculis aliquet diam.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="width80">
+        <img src="images/contact.png" alt="">
+
+
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="">
+            <input type="text" placeholder="Your e-mail">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            <button class="dark">Send</button>
+        </form>
+
+    </section>
+
+    <footer>
+        <div class="footerGrid">
+            <h4>Services</h4>
+            <ul class="list">
+                <li>Know our standard plans</li>
+                <li>Get an uncompromised budget</li>
+                <li>Get a customized plan</li>
+            </ul>
+        </div>
+
+
+
+        <div class="footerGrid">
+            <h4>Any questions?</h4>
+            <ul class="list">
+                <li>FAQ</li>
+                <li>Get a free consulting</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+
+        <div class="footerGrid">
+            <ul class="medias">
+                <li><img src="icons/facebook.png" alt=""></li>
+                <li><img src="icons/instagram.png" alt=""></li>
+                <li><img src="icons/linkedin.png" alt=""></li>
+                <li><img src="icons/twitter.png" alt=""></li>
+            </ul>
+            <span class="logo">logo</span>
+        </div>
+
+        <span class="slogan footerGrid">making your dreams come true</span>
+    </footer>
 </body>
 
 </html>

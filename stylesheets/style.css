@@ -1,0 +1,358 @@
+/*Variables Definition*/
+
+:root {
+    --baseBlue: #42A5F5;
+    --darkerBlue: #0077C2;
+}
+
+/*Generic Styles*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h4, .logo, .slogan {
+    font-family: 'Roboto Slab';
+    font-weight: 500;
+}
+
+.price, footer {
+    background-color: var(--baseBlue);
+    color: #fff;
+}
+
+.price, header, .option {
+    display: flex;
+    align-items: center;
+}
+
+section.width80 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*Classes*/
+
+.heading {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.invisible {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.width80 {
+    width: 80%;
+    margin: auto;
+}
+
+/*buttons*/
+
+button {
+    background-color: #ffffff;
+    outline: none;
+    border: 2px solid var(--darkerBlue);
+    color: var(--darkerBlue);
+    border-radius: 1.875em;
+    font-size: 1.2em;
+    padding: 1.5% 5%;
+}
+
+button.dark {
+    color: #fff;
+    background-color: var(--baseBlue);
+    border: none;
+}
+
+button:active {
+    filter: brightness(80%);
+}
+
+/*Menu*/
+
+svg.burger {
+    fill: white;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--baseBlue);
+    animation-name: showNav;
+    animation-duration: .3s;
+    color: #fff;
+}
+
+.navbar .menu {
+    margin: .5em;
+}
+
+nav li {
+    margin: 1em 0;
+    font-size: 2em;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:not(.login) {
+    color: inherit;
+}
+
+.login {
+    color: var(--baseBlue);
+    background-color: #fff;
+    border-radius: 1.875em;
+    font-size: .8em;
+    padding: 1.5% 10%;
+}
+
+.navbar ul {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navbar ul {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*Header*/
+
+nav {
+    display: none;
+}
+
+h1 {
+    font-family: 'Roboto Slab';
+    font-size: 2em;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: .5em 0;
+    width: 95%;
+}
+
+.scrollHeader {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000;
+    width: 100%;
+    animation-name: headerIn;
+    animation-duration: .1s;
+}
+
+.scrollHeader .show svg *{
+    fill: #000;
+}
+
+.scrollHeader h1, .scrollHeader button {  
+    margin: 0 .5em;
+}
+
+/*Section 'Home'*/
+
+section img {
+    width: 100%;
+}
+
+#home {
+    width: 95%;
+    margin: -32% auto 0;
+}
+
+#home p {
+    width: 80%;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+/*Section 'Pricing'*/
+
+#pricing {
+    margin: 5em 0;
+}
+
+.option {
+    border: 4px solid var(--baseBlue);
+    border-radius: 40px;
+    margin-top: 3em;
+    flex-direction: column;
+}
+
+h3 {
+    margin: .5em 0;
+    font-size: 3em;
+}
+
+.option ul li {
+    list-style-type: disc;
+    font-size: 1.2em;
+    margin: .3em 0;
+}
+
+.option button {
+    margin: 1em 0;
+}
+
+.price, .option {
+    justify-content: center;
+}
+
+.price {
+    width: 100%;
+    padding: 10% 0;
+    border-radius: 30px 30px 0 0;
+    font-size: 3em;
+}
+
+/*Titles Style*/
+
+h2 {
+    font-size: 2em;
+    margin: .5em 0;
+}
+
+/*Section 'About'*/
+
+#about p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+#about {
+    margin: 5em auto;
+}
+
+/*Section 'Contact'*/
+
+input[type="text"], textarea {
+    width: 95%;
+    resize: none;
+    border: 3px solid var(--baseBlue);
+    border-radius: 1.5em;
+    outline: none;
+    font-family: 'Roboto';
+    padding-left: .5em;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+    color: var(--baseBlue);
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: var(--darkerBlue);
+}
+
+input[type="text"] {
+    height: 2em;
+}
+
+textarea {
+    padding-top: .5em;
+}
+
+#contactForm * {
+    margin: .5em 0;
+}
+
+#contact {
+    margin: 3em auto;
+}
+
+/*Footer*/
+
+footer {
+    height: 260px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+footer ul.medias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: .375em;
+}
+
+footer ul.list {
+    font-size: .675em;
+}
+
+.slogan {
+    font-size: 1.3em;
+    line-height: 1.2em;
+}
+
+footer ul.list li {
+    margin: .75em 0;
+}
+
+footer h4 {
+    font-size: 1.125em;
+    margin-bottom: .8em;
+}
+
+footer .logo {
+    font-size: 2em;
+}
+
+.footerGrid {
+    padding: 30px;
+}
+
+/*Login Page*/
+
+
+@keyframes showNav {
+    from {
+        width: 40%;
+        height: 40%;
+        color: transparent;
+        border-radius: 50%;
+        background-color: var(--darkerBlue);
+    }
+}
+
+@keyframes headerIn {
+    from {
+        top: -10%;
+        color: transparent;
+    }
+}
