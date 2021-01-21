@@ -14,11 +14,6 @@
 </head>
 
 <body>
-    <svg width="100%" viewBox="0 0 1440 865" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-            d="M1440 0H0V100C0 158 63.5021 1150.5 780.027 783C1496.55 415.5 1440 100 1440 100C1444.39 7.25902 1440 0 1440 0Z"
-            fill="#42A5F5" />
-    </svg>
 
     <header id="heading">
         <button class="show menu invisible" onclick="display('.navbar')">
@@ -51,8 +46,10 @@
     </header>
 
     <section id="home">
-        <img src="images/home.png" alt="">
-        <p class="slogan">Discover a whole new world of pure imagination</p>
+        <div class="container">
+            <img src="images/home.png" alt="">
+            <p class="slogan">Discover a whole new world of pure imagination</p>
+        </div>
     </section>
 
     <section id="pricing">
@@ -98,7 +95,7 @@
     <section id="about" class="width80">
         <img src="images/about.png" alt="">
 
-        <div>
+        <div class="aboutText">
             <h2>About Us</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -114,12 +111,15 @@
         <img src="images/contact.png" alt="">
 
 
-        <h2>Contact Us</h2>
-        <form id="contactForm" action="">
-            <input type="text" placeholder="Your e-mail">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <button class="dark">Send</button>
-        </form>
+        <div>
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="">
+                <input type="text" placeholder="Your e-mail">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <button class="dark">Send</button>
+            </form>
+        </div>
+        
 
     </section>
 
@@ -144,7 +144,7 @@
             </ul>
         </div>
 
-        <div class="footerGrid">
+        <div class="footerGrid mediaList">
             <ul class="medias">
                 <li><img src="icons/facebook.png" alt=""></li>
                 <li><img src="icons/instagram.png" alt=""></li>

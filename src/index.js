@@ -5,7 +5,7 @@ function display(qry) {
 }
 
 function hide(qry) {
-    selector(qry).style.display = 'none';
+    selector(qry).style.display = window.innerWidth >= 1000 ? 'block': 'none';
 }
 
 window.onscroll = function () { fixedHeader() };
@@ -19,3 +19,5 @@ function fixedHeader() {
             selector('#heading').className = ''
         )
 }
+
+addEventListener('resize', ()=> {hide('.navbar')})

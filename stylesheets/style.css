@@ -20,12 +20,12 @@ h1, h2, h4, .logo, .slogan {
     font-weight: 500;
 }
 
-.price, footer {
+.price, footer, button.dark, .navbar, #home {
     background-color: var(--baseBlue);
     color: #fff;
 }
 
-.price, header, .option {
+.price, header, .option, .container, #home {
     display: flex;
     align-items: center;
 }
@@ -37,12 +37,6 @@ section.width80 {
 }
 
 /*Classes*/
-
-.heading {
-    width: 100%;
-    top: 0;
-    left: 0;
-}
 
 .menu {
     padding: 0;
@@ -70,21 +64,21 @@ section.width80 {
 button {
     background-color: #ffffff;
     outline: none;
-    border: 2px solid var(--darkerBlue);
-    color: var(--darkerBlue);
+    border: 2px solid var(--baseBlue);
+    color: var(--baseBlue);
     border-radius: 1.875em;
     font-size: 1.2em;
     padding: 1.5% 5%;
 }
 
-button.dark {
+button:active {
     color: #fff;
     background-color: var(--baseBlue);
-    border: none;
 }
 
-button:active {
-    filter: brightness(80%);
+button.dark:active {
+    background-color: #fff;
+    color: var(--baseBlue);
 }
 
 /*Menu*/
@@ -99,10 +93,8 @@ svg.burger {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--baseBlue);
     animation-name: showNav;
     animation-duration: .3s;
-    color: #fff;
 }
 
 .navbar .menu {
@@ -127,13 +119,7 @@ li a:not(.login) {
     background-color: #fff;
     border-radius: 1.875em;
     font-size: .8em;
-    padding: 1.5% 10%;
-}
-
-.navbar ul {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
+    padding: 0 16px;
 }
 
 .navbar ul {
@@ -158,7 +144,6 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    color: #fff;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
@@ -173,31 +158,33 @@ header {
     color: #000;
     width: 100%;
     animation-name: headerIn;
-    animation-duration: .1s;
+    animation-duration: .5s;
 }
 
-.scrollHeader .show svg *{
+.scrollHeader .show svg * {
     fill: #000;
 }
 
-.scrollHeader h1, .scrollHeader button {  
+.scrollHeader h1, .scrollHeader button {
     margin: 0 .5em;
 }
 
 /*Section 'Home'*/
 
-section img {
+#about img, #contact img, #home img {
     width: 100%;
 }
 
 #home {
-    width: 95%;
-    margin: -32% auto 0;
+    height: 100vh;
+    border-top-right-radius: 80% 50%;
 }
 
-#home p {
-    width: 80%;
+.container {
+    justify-content: center;
+    flex-direction: column;
     margin: auto;
+    width: 80%;
     font-size: 1.5em;
 }
 
@@ -337,8 +324,7 @@ footer .logo {
     padding: 30px;
 }
 
-/*Login Page*/
-
+/*Animations*/
 
 @keyframes showNav {
     from {
@@ -352,7 +338,151 @@ footer .logo {
 
 @keyframes headerIn {
     from {
-        top: -10%;
+        top: -20%;
         color: transparent;
+    }
+}
+
+/*Desktop*/
+
+@media (min-width: 1000px) {
+    /*Generic Styles*/
+    button:hover {
+        cursor: pointer;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    /*Header*/
+    header {
+        flex-direction: row-reverse;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    button.invisible {
+        display: none;
+    }
+    .scrollHeader *:not(.login) {
+        color: #000;
+    }
+    .login {
+        padding: .1875em .8em;
+    }
+    .scrollHeader .login {
+        background-color: var(--baseBlue);
+        color: #fff;
+    }
+    .navbar {
+        position: relative;
+        display: inline;
+        width: 80%;
+        background-color: transparent;
+        animation: none;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        height: 3em;
+        margin-left: 2em;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar ul li {
+        font-size: 1.8em;
+    }
+    .navbar ul li a:not(.login):hover {
+        padding-bottom: 13px;
+        border-bottom: 4px solid var(--baseBlue);
+    }
+    /*Section 'Home'*/
+    .container {
+        flex-direction: row-reverse;
+    }
+    #home {
+        border-top-right-radius: 50% 60%;
+    }
+    #home img {
+        width: 50%;
+    }
+    #home p {
+        width: 26%;
+        font-size: 32pt;
+    }
+    /*Section 'Pricing'*/
+    .priceList {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .price {
+        padding: 20% 0;
+    }
+    /*Section 'About'*/
+    #about {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #about img {
+        width: 95%;
+        margin-top: 1.5em;
+    }
+    #about p {
+        font-size: 1.8em;
+    }
+    .aboutText {
+        margin-left: 3em;
+    }
+    /*Section 'Contact'*/
+    #contact {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    #contact img {
+        width: 40%;
+    }
+    #contactForm {
+        display: grid;
+    }
+    #contactForm button {
+        width: fit-content;
+    }
+    input[type="text"], textarea {
+        width: 420px;
+    }
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .slogan {
+        display: none;
+    }
+    .footerGrid{
+        width: 25%;
+    }
+    footer h4 {
+        font-size: 1.5em;
+    }
+    .list li{
+        font-size: 1.5em;
+    }
+    .mediaList{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    footer .logo {
+        margin-bottom: .5em;
+        font-size: 4em;
+    }
+    footer ul.medias {
+        width: 60%;
+    }
+    .medias li img{
+        width: 1.5em;
     }
 }
