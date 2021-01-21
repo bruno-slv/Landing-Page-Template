@@ -11,7 +11,7 @@ Simplesmente vá até [o site](https://bruno-slv.github.io/Landing-Page-Template
 * **Home** - Homepage
 * **Pricing** - Planos diferentes e preços ilustrativos
 * **About** - Seção dedicada a falar sobre a "empresa"
-* **Contact** - Seção com as um formulário para contato
+* **Contact** - Seção com um formulário para contato
 * **Login** - Redireciona para uma página de login
 
 ## :pencil2: Uso 
