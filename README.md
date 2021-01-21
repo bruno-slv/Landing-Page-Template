@@ -1,8 +1,10 @@
-# :books: Landing Page Template#
+<h1 style="text-align: center;"> 📚 Landing Page Template </h1>
+
+<img src="homepage.png" />
 
 ## :star: Iniciando
 
-Simplesmente vá até [o site](https://bruno-slv.github.io) e confira meus trabalhos mais recentes :stuck_out_tongue:.
+Simplesmente vá até [o site](https://bruno-slv.github.io/Landing-Page-Template) e veja ele na natureza selvagem.
 
 ## :ledger: Seções do site
 
